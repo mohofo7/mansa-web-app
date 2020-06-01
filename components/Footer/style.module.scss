@@ -1,0 +1,13 @@
+@import "styles/variables";
+
+$footer-background: #F8F9FA;
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  direction: ltr;
+  box-sizing: border-box;
+  background-color: $footer-background;
+  border-top: 1px solid $border-color;
+  box-shadow: 0 -1px 1px 1px #CED4DA;
+}

@@ -1,0 +1,28 @@
+@import "styles/variables";
+
+$logo-size: $header-height - 10;
+$header-background: #F8F9FA;
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: $header-height;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: $header-background;
+  border-bottom: 1px solid $border-color;
+  box-shadow: 0 1px 1px 1px #CED4DA;
+}
+
+.headerLogo {
+  position: fixed;
+  top: ($header-height - $logo-size) / 2;
+  right: 50%;
+  transform: translateX(50%);
+  width: $logo-size;
+  height: $logo-size;
+}
