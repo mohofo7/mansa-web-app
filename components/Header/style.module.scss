@@ -1,7 +1,7 @@
 @import "styles/variables";
 
 $logo-size: $header-height - 10;
-$header-background: #F8F9FA;
+$header-background: white;
 
 .header {
   position: fixed;
@@ -16,6 +16,7 @@ $header-background: #F8F9FA;
   background-color: $header-background;
   border-bottom: 1px solid $border-color;
   box-shadow: 0 1px 1px 1px #CED4DA;
+  z-index: 1;
 }
 
 .headerLogo {

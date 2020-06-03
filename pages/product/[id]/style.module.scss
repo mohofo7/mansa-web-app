@@ -1,0 +1,29 @@
+@import "styles/variables";
+
+.page {
+  padding: 16px;
+  background: $background-color;
+}
+.carousel {
+  width: 100%;
+  height: 50vh;
+}
+.container {
+}
+.header {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid $container-border;
+  background-color: white;
+}
+.title {
+
+}
+.price {
+
+}
+.sliderItem {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+}
