@@ -10,29 +10,29 @@ const Product = (props) => {
     const { images, title, code, price, seller, description, link } = product;
     return (
         <div className={styles.page}>
-            <Carousel className={styles.carousel}>
-                {images.map(image => (
-                    <div>
+            <Carousel className={styles.carousel} autoplay>
+                {images.map((image, i) => (
+                    <div key={i}>
                         <div className={styles.sliderItem} style={{ backgroundImage: `url(${image})` }}/>
                     </div>
                 ))}
             </Carousel>
             <div className={styles.container}>
                 <Title level={3} className={styles.title}>{title}</Title>
+                <Title level={4} className={styles.price}>{`قیمت: ${price} تومان`}</Title>
                 <div className={styles.rateContainer}>
+                    <span><Text>فروشنده: </Text><Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link></span>
                     <Text code className={styles.code}>{code}</Text>
-                    <Title level={4} className={styles.price}>{`قیمت: ${price} تومان`}</Title>
                 </div>
-                <span><Text>فروشنده: </Text><Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link></span>
             </div>
             <div className={styles.container}>
                 <Title level={4}>جزئیات محصول:</Title>
                 <Text>{description}</Text>
             </div>
             <div className={styles.container}>
-                <div className="d-flex space-between">
-                    <Title level={4}>درباره <Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link>:</Title>
+                <div className={styles.sellerHeader}>
                     <img src={seller.icon} alt={seller.name} className={styles.sellerIcon} />
+                    <Title level={4} className="my-auto">درباره <Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link>:</Title>
                 </div>
                 <Text>{seller.description}</Text>
             </div>
@@ -63,7 +63,7 @@ export const getServerSideProps = async (context) => {
                     description: 'کیاگالری یه گالری خوبه که محصولات جالبی داره و به نظرم سایت ما اصلا براش اهمیتی نداره'
                 },
                 description: 'سنجاق سینه پرنده برنجی که خیلی قشنگ و جا داره، میتونی تو مهمونی ها بندازیش و حالشو ببری.' +
-                    'این چرتو پرت رو دارم از ذهن خودم بلغور میکنم در نتیجه چیز جالبی برای خوندن نیست و صرف برای پر کردن فضاست.'
+                    'این چرتو پرت رو دارم از ذهن خودم فوران میدم در نتیجه چیز جالبی برای خوندن نیست و صرف برای پر کردن فضاست.'
             }
         },
     }

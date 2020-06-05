@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.page {
+  max-width: 450px;
+  margin: auto;
+  padding: 16px;
+  background: $background-color;
+}
+.banner {
+  position: relative;
+}
+.bannerTitle {
+  position: absolute;
+  max-width: 250px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bannerSubtitle {
+  max-width: 250px;
+}
+.icon {
+  font-size: 100px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.login {
+  padding: 16px 0;
+  background-color: #CED4DA;
+  text-align: center;
+}

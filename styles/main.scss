@@ -4,6 +4,20 @@
 .d-flex {
   display: flex;
 }
+.m-auto {
+  margin: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.text-center {
+  text-align: center;
+}
 .space-between {
   justify-content: space-between;
 }
