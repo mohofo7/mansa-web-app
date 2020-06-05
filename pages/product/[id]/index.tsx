@@ -1,6 +1,8 @@
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel, Typography } from "antd";
 import styles from "./style.module.scss";
+
+const { Title } = Typography;
 
 const Product = (props) => {
     const { product } = props;
@@ -16,7 +18,7 @@ const Product = (props) => {
             </Carousel>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <div className={styles.title}>{title}</div>
+                    <Title level={3} className={styles.title}>{title}</Title>
                     <div className={styles.price}>{price}</div>
                 </div>
             </div>
