@@ -18,14 +18,14 @@
 }
 .price {
   direction: ltr;
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 .rate {
   direction: ltr;
 }
 .buy {
-  width: calc(100% - 32px);
-  margin: 16px;
+  flex: 1;
+  margin-left: 16px;
 }
 .rateContainer {
   display: flex;
@@ -36,9 +36,22 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 16px;
+  display: flex;
   background-color: white;
   border-top: 1px solid $border-color;
   box-shadow: 0 -1px 1px 1px #CED4DA;
+}
+.sellerIcon {
+  border: 1px solid $border-color;
+  border-radius: 100%;
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+}
+.instagramIcon {
+  line-height: 2 !important;
 }
 .sliderItem {
   height: 50vh;

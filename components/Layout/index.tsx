@@ -13,7 +13,6 @@ const Layout: React.FC<ILayout> = (props: ILayout) => {
             <section className={styles.section}>
                 {children}
             </section>
-            <Footer />
         </div>
     );
 };
