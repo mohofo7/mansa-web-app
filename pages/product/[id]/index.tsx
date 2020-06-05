@@ -1,6 +1,5 @@
 import React from "react";
-import {Button, Carousel, Rate, Typography} from "antd";
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import {Button, Carousel, Typography} from "antd";
 import styles from "./style.module.scss";
 
 const { Title, Text, Link } = Typography;
@@ -18,22 +17,19 @@ const Product = (props) => {
                 ))}
             </Carousel>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <Title level={3} className={styles.title}>{title}</Title>
-                    <div className={styles.rateContainer}>
-                        <Text code className={styles.code}>{code}</Text>
-                        <Rate className={styles.rate} defaultValue={rate} disabled />
-                    </div>
+                <Title level={3} className={styles.title}>{title}</Title>
+                <div className={styles.rateContainer}>
+                    <Text code className={styles.code}>{code}</Text>
                     <Title level={4} className={styles.price}>{`قیمت: ${price} تومان`}</Title>
-                    <span><Text>فروشنده: </Text><Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link></span>
                 </div>
-                <div className={styles.detail}>
-                    <Title level={4}>جزئیات محصول:</Title>
-                    <Text>{description}</Text>
-                </div>
-                <div className={styles.buyContainer}>
-                    <Button className={styles.buy} type="primary" shape="round" size={"large"}>خرید</Button>
-                </div>
+                <span><Text>فروشنده: </Text><Link href={`https://instagram.com/${seller.instagramId}`}>{seller.name}</Link></span>
+            </div>
+            <div className={styles.container}>
+                <Title level={4}>جزئیات محصول:</Title>
+                <Text>{description}</Text>
+            </div>
+            <div className={styles.buyContainer}>
+                <Button className={styles.buy} type="primary" shape="round" size={"large"}>خرید</Button>
             </div>
         </div>
     );

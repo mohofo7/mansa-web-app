@@ -4,27 +4,21 @@
   padding: 16px;
   background: $background-color;
 }
+.container {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid $container-border;
+  border-radius: 8px;
+  background-color: white;
+}
+
 .carousel {
   width: 100%;
   height: 50vh;
 }
-.header {
-  margin-top: 16px;
-  padding: 16px;
-  border: 1px solid $container-border;
-  border-radius: 8px;
-  background-color: white;
-}
-.detail {
-  margin-top: 16px;
-  padding: 16px;
-  border: 1px solid $container-border;
-  border-radius: 8px;
-  background-color: white;
-}
 .price {
   direction: ltr;
-  margin-top: 8px;
+  margin-top: 0;
 }
 .rate {
   direction: ltr;
@@ -36,7 +30,6 @@
 .rateContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .buyContainer {
   position: fixed;
