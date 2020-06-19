@@ -1,11 +1,13 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import {Button, Typography} from "antd";
 import {SafetyCertificateOutlined, BarChartOutlined, SketchOutlined} from "@ant-design/icons";
 import styles from "./style.module.scss";
+import LoginModal from "../components/LoginModal/intex";
 
 const { Title, Text } = Typography;
 
 const HomePage = () => {
+    const [showLoginModal, setShowLoginModal] = useState(false);
     return (
         <Fragment>
             <div className={styles.banner}>
@@ -27,13 +29,18 @@ const HomePage = () => {
                     <BarChartOutlined className={styles.icon} />
                     <Title level={4}>اطلاعات آماری</Title>
                     <SketchOutlined className={styles.icon} />
-                    <Title level={4}>ضمانت کیفیت</Title>
+                    <Title level={4}>ضمانت سلامت</Title>
                 </div>
             </div>
             <div className={styles.login}>
                 <Title level={3}>فروشنده هستید؟</Title>
-                <Button shape={"round"} size={"large"}>ورود به پنل فروشندگان</Button>
+                <Button shape={"round"} size={"large"} onClick={() => setShowLoginModal(true)}>ورود به پنل فروشندگان</Button>
             </div>
+            <LoginModal
+                visible={showLoginModal}
+                onCancel={() => setShowLoginModal(false)}
+                onCreate={value => console.log(value)}
+            />
         </Fragment>
     );
 }
